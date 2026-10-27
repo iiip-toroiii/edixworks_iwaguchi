@@ -23,7 +23,7 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 /* Hero and header */
 .hero {
   height: 663px;
-  background: url('../assets/Figma_top.png') no-repeat center top / 1440px 663px;
+  background: url('../assets/top2.png') no-repeat center top / 1440px 663px;
   position: relative;
 }
 .site-header {
@@ -41,7 +41,7 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 .site-nav > a:not(.button) { font-size: 16px; line-height: 40px; }
 .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 100px; background: var(--brand); color: #fff; font-size: 14px; font-weight: 400; }
 .button--contact { width: 155px; height: 40px; font-size: 16px; margin-left: 8px; transform: translateY(1px); }
-.hero-content { position: absolute; top: 264px; left: 0; width: 100%; text-align: center; color: #ffffff; }
+.hero-content { position: absolute; top: 264px; left: 0; width: 100%; text-align: center; color: #ffffff; font-family: 'Noto Serif JP', serif; }
 .hero-content h1 { margin: 0; font-size: 64px; font-weight: 700; line-height: 1.5; letter-spacing: 0; }
 .hero-content p { margin: 19px 0 0; font-size: 14px; line-height: 1.5; font-weight: 400; }
 

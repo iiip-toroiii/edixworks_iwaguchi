@@ -2,6 +2,7 @@
 :root {
   --ink: #292929;
   --brand: #0065a8;
+  --button-bg: #8f4f3a;
   --about-surface: #eeeeee;
   --footer-blue: #0092f3;
 }
@@ -39,7 +40,7 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 .site-logo { font-size: 24px; font-weight: 700; line-height: 40px; }
 .site-nav { display: flex; align-items: center; gap: 40px; }
 .site-nav > a:not(.button) { font-size: 16px; line-height: 40px; }
-.button { display: inline-flex; align-items: center; justify-content: center; border-radius: 100px; background: var(--brand); color: #fff; font-size: 14px; font-weight: 400; }
+.button { display: inline-flex; align-items: center; justify-content: center; border-radius: 100px; background: var(--button-bg); color: #fff; font-size: 14px; font-weight: 400; }
 .button--contact { width: 155px; height: 40px; font-size: 16px; margin-left: 8px; transform: translateY(1px); }
 .hero-content { position: absolute; top: 188px; left: 0; width: 100%; text-align: center; color: #493225; font-family: 'Noto Serif JP', serif; }
 .hero-content__name { display: block; width: min(720px, 82vw); height: auto; margin: 0 auto; animation: hero-name-rise 1.8s cubic-bezier(.2, .7, .25, 1) both; }

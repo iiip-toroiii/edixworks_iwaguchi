@@ -56,7 +56,7 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 /* Repeated section headings */
 .section-heading { position: absolute; left: 0; width: 100%; text-align: center; }
 .section-heading h2 { margin: 0; font-size: 48px; font-weight: 700; line-height: 1.2; }
-.section-heading p { margin: 0; font-size: 14px; font-weight: 700; line-height: 21px; color: var(--brand); }
+.section-heading p { margin: 0; font-size: 14px; font-weight: 700; line-height: 21px; color: var(--button-bg); }
 .three-column-layout { display: grid; width: 1028px; grid-template-columns: repeat(3, 300px); column-gap: 64px; margin: 0 auto; }
 .four-column-layout { display: grid; width: 1028px; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 30px; margin: 0 auto; }
 

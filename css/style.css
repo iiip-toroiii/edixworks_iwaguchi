@@ -72,6 +72,8 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 .work-card { min-height: 391px; }
 .work-card > img { display: block; width: 300px; height: 300px; object-fit: cover; }
 .work-card h3 { font-size: 18px; font-weight: 700; line-height: 27px; margin: 21px 0 0; }
+.work-card__description { margin: 8px 0 0; font-size: 14px; line-height: 21px; }
+.work-card__description + .work-card__tag { margin-top: 12px; }
 .work-card__tag { display: table; width: fit-content; margin-top: 23px; padding: 0 8px; border-radius: 4px; background: var(--about-surface); font-size: 14px; font-weight: 400; line-height: 20px; white-space: nowrap; }
 .button--more { position: absolute; top: 1110px; left: 50%; transform: translateX(-50%); width: 178px; height: 39px; }
 

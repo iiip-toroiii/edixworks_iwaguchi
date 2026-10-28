@@ -95,3 +95,47 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 /* White breathing room and thin footer bar */
 .site-footer { height: 37px; margin-top: 80px; padding: 0 68px; display: flex; align-items: center; justify-content: flex-end; background: var(--button-bg); color: #fff; }
 .site-footer small { font-size: 14px; line-height: 20px; }
+
+/* Brush cursor and tanuki footprints */
+body,
+a,
+button,
+.button {
+  cursor: url('../assets/hude-cursor.png') 4 4, auto;
+}
+input,
+textarea,
+select,
+[contenteditable='true'] {
+  cursor: text;
+}
+.cursor-trail {
+  position: fixed;
+  z-index: 9999;
+  width: 28px;
+  height: 20px;
+  pointer-events: none;
+  user-select: none;
+  opacity: .55;
+  transform-origin: center;
+  animation: footprint-fade 2.5s ease-out forwards;
+}
+@keyframes footprint-fade {
+  0% { opacity: .55; }
+  20% { opacity: .44; }
+  40% { opacity: .32; }
+  60% { opacity: .2; }
+  80% { opacity: .08; }
+  100% { opacity: 0; }
+}
+@media (hover: none), (pointer: coarse) {
+  body,
+  a,
+  button,
+  .button {
+    cursor: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor-trail { display: none; }
+}

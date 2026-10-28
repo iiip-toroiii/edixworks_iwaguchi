@@ -18,7 +18,23 @@
         <a href="#service">Service</a>
         <a href="#works">Works</a>
         <a href="#about">About</a>
-        <a class="button button--contact" href="#contact">Contact</a>
+        <div class="contact-popover">
+          <a class="button button--contact" href="#contact" aria-expanded="false" aria-controls="contact-map">Contact</a>
+          <section class="contact-map" id="contact-map" aria-label="アクセス" aria-hidden="true" hidden>
+            <h2>アクセス</h2>
+            <iframe
+              title="東京都台東区東上野3丁目35-9 本池田ビル周辺の地図"
+              data-src="https://www.google.com/maps?q=東京都台東区東上野3丁目35-9&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <address>
+              〒110-0015<br>
+              東京都台東区東上野3丁目35-9<br>
+              本池田ビル 3F
+            </address>
+            <a class="contact-map__link" href="https://www.google.com/maps/search/?api=1&query=東京都台東区東上野3丁目35-9" target="_blank" rel="noopener noreferrer">Googleマップで開く</a>
+          </section>
+        </div>
       </nav>
     </div>
     <div class="hero-content">
@@ -127,5 +143,6 @@
     </small>
   </footer>
   <script src="./js/cursor-trail.js" defer></script>
+  <script src="./js/contact-map.js" defer></script>
 </body>
 </html>

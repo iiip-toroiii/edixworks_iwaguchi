@@ -55,7 +55,8 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
   --paper-height: calc(650px * var(--scroll-scale));
   --bottom-visible-offset: calc(144px * var(--scroll-scale));
   position: absolute;
-  top: calc(100% - 1px);
+  /* scroll-top.png has 126px of transparent space above the hanging cord. */
+  top: calc(100% - 94px);
   right: 12px;
   width: var(--scroll-width);
   height: calc(1080px * var(--scroll-scale));

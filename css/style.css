@@ -10,7 +10,6 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  min-width: 1440px;
   margin: 0;
   background: #ffffff;
   color: var(--ink);
@@ -246,6 +245,7 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 .works-section .section-heading { top: 44px; }
 .works-section .section-heading p { transform: translateY(-1px); }
 .works-grid { position: absolute; left: 50%; top: 184px; transform: translateX(-50%); row-gap: 64px; }
+.works-carousel-dots { display: none; }
 .work-card { min-height: 391px; }
 .work-card > img { display: block; width: 240px; height: 240px; object-fit: cover; }
 .work-card h3 { font-size: 18px; font-weight: 700; line-height: 27px; margin: 21px 0 0; }
@@ -330,6 +330,166 @@ select,
   .button {
     cursor: auto;
   }
+}
+
+@media (max-width: 767px) {
+    body { min-width: 0; overflow-x: hidden; }
+    .hero {
+      height: 560px;
+      background-size: auto 560px;
+      background-position: center top;
+    }
+    .site-header {
+      position: relative;
+      top: 0;
+      right: auto;
+      left: auto;
+      height: auto;
+      padding: 18px 16px 0;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .site-logo { font-size: 26px; line-height: 36px; }
+    .site-nav {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+    }
+    .site-nav > a:not(.button) {
+      font-size: 14px;
+      line-height: 30px;
+      white-space: nowrap;
+    }
+    .button--contact {
+      width: 116px;
+      height: 34px;
+      font-size: 14px;
+    }
+    .contact-map-scene { display: none; }
+    .hero-content {
+      top: 180px;
+      padding: 0 20px;
+    }
+    .hero-content__name { width: min(620px, 100%); }
+    .hero-content p {
+      margin-top: 20px;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+    .section-heading { padding: 0 16px; }
+    .section-heading h2 {
+      font-size: clamp(30px, 8vw, 44px);
+      line-height: 1.35;
+    }
+    .service-section {
+      height: auto;
+      min-height: 0;
+      padding: 100px 16px 56px;
+    }
+    .service-section .section-heading,
+    .works-section .section-heading,
+    .about-section .section-heading {
+      position: static;
+    }
+    .service-grid {
+      position: static;
+      width: 100%;
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      transform: none;
+    }
+    .service-card {
+      min-height: 0;
+      width: min(100%, 380px);
+      margin: 0 auto;
+    }
+    .service-card:hover { transform: none; }
+    .service-card__image { width: min(62vw, 230px); height: auto; aspect-ratio: 1; }
+    .service-card__description {
+      min-height: 0;
+      margin-top: 14px;
+      padding: 16px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .works-section {
+      height: auto;
+      min-height: 0;
+      padding: 84px 0 86px;
+    }
+    .works-grid {
+      position: static;
+      display: flex;
+      width: 100%;
+      margin-top: 38px;
+      padding: 0 16px 8px;
+      gap: 16px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      transform: none;
+    }
+    .works-grid::-webkit-scrollbar { display: none; }
+    .work-card {
+      flex: 0 0 calc(100vw - 48px);
+      min-height: 0;
+      scroll-snap-align: center;
+    }
+    .work-card > img {
+      width: min(78vw, 300px);
+      height: auto;
+      aspect-ratio: 1;
+      margin: 0 auto;
+    }
+    .work-card h3 {
+      margin-top: 18px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .work-card__description { font-size: 14px; line-height: 1.7; }
+    .works-carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 22px;
+    }
+    .works-carousel-dot {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: #d3c7ba;
+      cursor: pointer;
+    }
+    .works-carousel-dot.is-active { background: var(--button-bg); }
+    .button--more { position: static; display: flex; margin: 30px auto 0; transform: none; }
+    .about-section {
+      height: auto;
+      min-height: 0;
+      padding: 84px 20px 70px;
+    }
+    .about-content {
+      position: static;
+      width: 100%;
+      margin-top: 40px;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      transform: none;
+    }
+    .about-content__text { width: 100%; max-width: 430px; text-align: center; }
+    .about-content__text h3 { margin: 0 0 12px; font-size: 26px; line-height: 1.5; }
+    .about-content__text p { font-size: 14px; line-height: 1.9; }
+    .site-footer {
+      height: 44px;
+      margin-top: 0;
+      padding: 0 20px;
+    }
 }
 @media (prefers-reduced-motion: reduce) {
   .cursor-trail { display: none; }

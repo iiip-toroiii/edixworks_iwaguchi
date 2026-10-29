@@ -36,9 +36,17 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
   justify-content: space-between;
   height: 54px;
 }
-.site-logo { font-size: 36px; font-weight: 700; line-height: 54px; }
+.site-logo {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+}
 .site-nav { display: flex; align-items: center; gap: 40px; }
-.site-nav > a:not(.button) { font-size: 24px; line-height: 54px; }
+.site-nav > a:not(.button) {
+  font-size: 24px;
+  line-height: 54px;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
 .button { display: inline-flex; align-items: center; justify-content: center; border-radius: 100px; background: var(--button-bg); color: #fff; font-size: 14px; font-weight: 400; }
 .button--contact { width: 220px; height: 54px; font-size: 24px; margin-left: 0; transform: translateY(1px); }
 .contact-popover {
@@ -216,7 +224,13 @@ a:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
 }
 .hero-content { position: absolute; top: 188px; left: 0; width: 100%; text-align: center; color: #493225; font-family: 'Noto Serif JP', serif; }
 .hero-content__name { display: block; width: min(720px, 82vw); height: auto; margin: 0 auto; animation: hero-name-rise 1.8s cubic-bezier(.2, .7, .25, 1) both; }
-.hero-content p { margin: 28px 0 0; font-size: 27px; line-height: 1.5; font-weight: 400; letter-spacing: -.25px; }
+.hero-content p {
+  margin: 28px 0 0;
+  font-size: 27px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -.25px;
+}
 @keyframes hero-name-rise {
   from { opacity: 0; filter: blur(8px); transform: translateY(24px); }
   to { opacity: 1; filter: blur(0); transform: translateY(0); }

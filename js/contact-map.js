@@ -9,6 +9,7 @@
   const trigger = wrapper.querySelector('.button--contact');
   const panel = wrapper.querySelector('.contact-map');
   const frame = panel.querySelector('iframe');
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const openDelay = 150;
   const closeDelay = 200;
   let openTimer;
@@ -16,6 +17,16 @@
   let closeAnimationTimer;
   let isPointerInside = false;
   let isFocusedInside = false;
+
+  if (!canHover) {
+    return;
+  }
+
+  panel.hidden = true;
+  panel.classList.remove('is-open', 'is-closing');
+  wrapper.classList.remove('is-open', 'is-closing');
+  trigger.setAttribute('aria-expanded', 'false');
+  panel.setAttribute('aria-hidden', 'true');
 
   function loadMap() {
     if (!frame.getAttribute('src')) {
@@ -28,6 +39,8 @@
     window.clearTimeout(closeAnimationTimer);
     loadMap();
     panel.hidden = false;
+    wrapper.classList.remove('is-closing');
+    wrapper.classList.add('is-open');
     panel.classList.remove('is-closing');
     window.requestAnimationFrame(function () {
       panel.classList.add('is-open');
@@ -43,14 +56,17 @@
     }
     panel.classList.remove('is-open');
     panel.classList.add('is-closing');
+    wrapper.classList.remove('is-open');
+    wrapper.classList.add('is-closing');
     trigger.setAttribute('aria-expanded', 'false');
     panel.setAttribute('aria-hidden', 'true');
     closeAnimationTimer = window.setTimeout(function () {
       if (!isPointerInside && !isFocusedInside) {
         panel.hidden = true;
         panel.classList.remove('is-closing');
+        wrapper.classList.remove('is-closing');
       }
-    }, 500);
+    }, 1050);
   }
 
   function scheduleOpen() {

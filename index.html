@@ -13,27 +13,39 @@
 <body>
   <header class="hero" id="top">
     <div class="site-header">
-      <a class="site-logo" href="#top" aria-label="Edix Works トップへ">Edix Works</a>
+      <a class="site-logo" href="#top" aria-label="Edit Works Ponpoko-Shosi トップへ">Ponpoko-Shosi</a>
       <nav class="site-nav" aria-label="メインナビゲーション">
-        <a href="#service">Service</a>
-        <a href="#works">Works</a>
-        <a href="#about">About</a>
+        <a href="#service">取り扱い業務</a>
+        <a href="#works">法律と登記のいろは</a>
+        <a href="#about">自己紹介</a>
         <div class="contact-popover">
-          <a class="button button--contact" href="#contact" aria-expanded="false" aria-controls="contact-map">Contact</a>
-          <section class="contact-map" id="contact-map" aria-label="アクセス" aria-hidden="true" hidden>
-            <h2>アクセス</h2>
-            <iframe
-              title="東京都台東区東上野3丁目35-9 本池田ビル周辺の地図"
-              data-src="https://www.google.com/maps?q=東京都台東区東上野3丁目35-9&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <address>
-              〒110-0015<br>
-              東京都台東区東上野3丁目35-9<br>
-              本池田ビル 3F
-            </address>
-            <a class="contact-map__link" href="https://www.google.com/maps/search/?api=1&query=東京都台東区東上野3丁目35-9" target="_blank" rel="noopener noreferrer">Googleマップで開く</a>
-          </section>
+          <a class="button button--contact" href="#contact" aria-expanded="false" aria-controls="contact-map">事務所案内</a>
+          <!-- Contact演出: 上軸固定、和紙・下軸・タヌキを縦に展開するシーン。 -->
+          <div class="contact-map-scene">
+            <img class="contact-map-scene__top" src="./assets/scroll-top.png" alt="" aria-hidden="true">
+            <section class="contact-map" id="contact-map" aria-label="アクセス" aria-hidden="true" hidden>
+              <img class="contact-map__paper-image" src="./assets/scroll-paper.png" alt="" aria-hidden="true">
+              <div class="contact-map__paper">
+                <h2>アクセス</h2>
+                <iframe
+                  title="東京都台東区東上野3丁目35-9 本池田ビル周辺の地図"
+                  data-src="https://www.google.com/maps?q=東京都台東区東上野3丁目35-9&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <address>
+                  〒110-0015<br>
+                  東京都台東区東上野3丁目35-9<br>
+                  本池田ビル 3F
+                </address>
+                <a class="contact-map__link" href="https://www.google.com/maps/search/?api=1&query=東京都台東区東上野3丁目35-9" target="_blank" rel="noopener noreferrer">Googleマップで開く</a>
+              </div>
+            </section>
+            <div class="scroll-bottom-group">
+              <img class="contact-map-scene__bottom" src="./assets/scroll-bottom.png" alt="" aria-hidden="true">
+              <img class="contact-map-scene__tanuki contact-map-scene__tanuki--hanging" src="./assets/tanuki-hanging.png" alt="" aria-hidden="true">
+            </div>
+            <img class="contact-map-scene__tanuki contact-map-scene__tanuki--fall" src="./assets/tanuki-fall.png" alt="" aria-hidden="true">
+          </div>
         </div>
       </nav>
     </div>
@@ -125,8 +137,8 @@
 
     <section class="about-section" id="about" aria-labelledby="about-title">
       <div class="section-heading">
-        <h2 id="about-title">About</h2>
-        <p>私について</p>
+        <h2 id="about-title">自己紹介</h2>
+        <p>About</p>
       </div>
       <div class="about-content">
         <img class="about-content__photo" src="./assets/image.png" alt="登記申請書を持ったタヌキのイラスト" width="200" height="200">
